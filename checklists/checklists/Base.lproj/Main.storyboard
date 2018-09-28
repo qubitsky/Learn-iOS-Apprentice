@@ -41,11 +41,57 @@
                             <outlet property="delegate" destination="7da-Vw-dZD" id="UN3-NY-rpS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="2oJ-Dp-1Rc"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="2oJ-Dp-1Rc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J91-fP-5St">
+                            <connections>
+                                <segue destination="LBw-If-Wv1" kind="show" id="hvc-qY-UIf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hxr-mL-nkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1074.375" y="-192.25352112676057"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="NAv-hz-Cnz">
+            <objects>
+                <tableViewController id="LBw-If-Wv1" customClass="AddItemViewController" customModule="checklists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KdR-IV-GD9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddItem" id="BNU-xi-EMZ">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BNU-xi-EMZ" id="IEW-4f-XrR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LBw-If-Wv1" id="7tp-Sv-L4m"/>
+                            <outlet property="delegate" destination="LBw-If-Wv1" id="58J-5X-anT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Item" id="X65-zk-9ZH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QBm-br-4g4">
+                            <connections>
+                                <action selector="cancel" destination="LBw-If-Wv1" id="iXb-CV-8ge"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="RHH-VS-3jU">
+                            <connections>
+                                <action selector="done" destination="LBw-If-Wv1" id="SG4-ql-dyr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGb-Iu-f06" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="-192"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wog-yb-lKJ">
