@@ -35,6 +35,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
     
     var items = [ChecklistItem]()
+    var checklist: Checklist!
     
     func documentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -70,8 +71,9 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .never
         loadCheckListItems()
+        title = checklist.name
     }
 
     override func didReceiveMemoryWarning() {

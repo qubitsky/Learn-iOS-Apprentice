@@ -9,10 +9,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checklists-->
+        <!--All Lists-->
+        <scene sceneID="D1F-yL-Izo">
+            <objects>
+                <tableViewController id="rel-q2-NFc" userLabel="All Lists" customClass="AllListsViewController" customModule="checklists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="15z-5G-HeV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="rel-q2-NFc" id="BNM-wl-70W"/>
+                            <outlet property="delegate" destination="rel-q2-NFc" id="Qw0-Wu-NEC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checklists" id="Ob6-sm-AhV"/>
+                    <connections>
+                        <segue destination="7da-Vw-dZD" kind="show" identifier="ShowChecklist" id="fDM-94-4og"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2I2-ih-n2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="-1067"/>
+        </scene>
+        <!--Checklist-->
         <scene sceneID="jBd-4r-xnL">
             <objects>
-                <tableViewController id="7da-Vw-dZD" customClass="ChecklistViewController" customModule="checklists" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7da-Vw-dZD" userLabel="Checklist" customClass="ChecklistViewController" customModule="checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DEd-Qm-5kn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +73,7 @@
                             <outlet property="delegate" destination="7da-Vw-dZD" id="UN3-NY-rpS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="2oJ-Dp-1Rc">
+                    <navigationItem key="navigationItem" title="Name of Checklist" id="2oJ-Dp-1Rc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="J91-fP-5St">
                             <connections>
                                 <segue destination="LBw-If-Wv1" kind="show" identifier="AddItem" id="hvc-qY-UIf"/>
@@ -135,7 +157,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7da-Vw-dZD" kind="relationship" relationship="rootViewController" id="Xz4-9x-PRE"/>
+                        <segue destination="rel-q2-NFc" kind="relationship" relationship="rootViewController" id="b9h-Ha-4Bt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gE-Yg-Xf6" userLabel="First Responder" sceneMemberID="firstResponder"/>

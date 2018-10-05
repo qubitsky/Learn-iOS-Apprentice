@@ -13,6 +13,8 @@
 		CC7353D52154F9550069BCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7353D42154F9550069BCAC /* Assets.xcassets */; };
 		CC7353D82154F9550069BCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7353D62154F9550069BCAC /* LaunchScreen.storyboard */; };
 		CC7C19A9215E8658008ECF8A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C19A8215E8658008ECF8A /* ItemDetailViewController.swift */; };
+		CC7C19AB2164BD7E008ECF8A /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C19AA2164BD7E008ECF8A /* AllListsViewController.swift */; };
+		CC7C19AD21671B69008ECF8A /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C19AC21671B69008ECF8A /* Checklist.swift */; };
 		CCE67203215A90FB007A2D19 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE67202215A90FB007A2D19 /* CheckListItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		CC7353D72154F9550069BCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC7353D92154F9550069BCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC7C19A8215E8658008ECF8A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		CC7C19AA2164BD7E008ECF8A /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
+		CC7C19AC21671B69008ECF8A /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		CCE67202215A90FB007A2D19 /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +70,8 @@
 				CC7353D92154F9550069BCAC /* Info.plist */,
 				CCE67202215A90FB007A2D19 /* CheckListItem.swift */,
 				CC7C19A8215E8658008ECF8A /* ItemDetailViewController.swift */,
+				CC7C19AA2164BD7E008ECF8A /* AllListsViewController.swift */,
+				CC7C19AC21671B69008ECF8A /* Checklist.swift */,
 			);
 			path = checklists;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 			files = (
 				CCE67203215A90FB007A2D19 /* CheckListItem.swift in Sources */,
 				CC7C19A9215E8658008ECF8A /* ItemDetailViewController.swift in Sources */,
+				CC7C19AD21671B69008ECF8A /* Checklist.swift in Sources */,
+				CC7C19AB2164BD7E008ECF8A /* AllListsViewController.swift in Sources */,
 				CC7353D02154F9520069BCAC /* ChecklistViewController.swift in Sources */,
 				CC7353CE2154F9520069BCAC /* AppDelegate.swift in Sources */,
 			);
