@@ -41,7 +41,7 @@
         <!--Add Checklist-->
         <scene sceneID="pDi-px-90t">
             <objects>
-                <tableViewController id="7hJ-F7-0nx" customClass="ListDetailViewController" customModule="checklists" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListDetailViewController" id="7hJ-F7-0nx" customClass="ListDetailViewController" customModule="checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Qft-NE-Wm9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +141,13 @@
                             <outlet property="delegate" destination="7da-Vw-dZD" id="UN3-NY-rpS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Name of Checklist" id="oMY-f4-qWF"/>
+                    <navigationItem key="navigationItem" title="Name of Checklist" id="oMY-f4-qWF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xJt-CU-Sks">
+                            <connections>
+                                <segue destination="LBw-If-Wv1" kind="show" identifier="AddItem" id="PbE-8e-lU9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hxr-mL-nkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,6 +234,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="PbE-8e-lU9"/>
         <segue reference="SZd-ZV-InH"/>
     </inferredMetricsTieBreakers>
 </document>
