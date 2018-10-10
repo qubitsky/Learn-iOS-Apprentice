@@ -83,6 +83,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         } else {
             cell.detailTextLabel!.text = "\(count) Remaining"
         }
+        cell.imageView!.image = UIImage(named: checklist.iconName)
 
         return cell
     }
@@ -143,6 +144,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
+        dataModel.sortChecklists()
+        tableView.reloadData()
         navigationController?.popViewController(animated: true)
     }
     func listDetailViewController(
@@ -154,6 +157,8 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
                 cell.textLabel!.text = checklist.name
             }
         }
+        dataModel.sortChecklists()
+        tableView.reloadData()
         navigationController?.popViewController(animated: true)
     }
 

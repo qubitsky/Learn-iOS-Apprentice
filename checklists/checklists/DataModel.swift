@@ -62,6 +62,7 @@ class DataModel {
             do {
                 // You decode to an object of [Checklist] type to lists
                 lists = try decoder.decode([Checklist].self, from: data)
+                sortChecklists()
             } catch {
                 print("Error decoding item array!")
             }
@@ -80,5 +81,10 @@ class DataModel {
             userDefaults.set(false, forKey: "FirstTime")
             userDefaults.synchronize()
         }
+    }
+    func sortChecklists() {
+        lists.sort(by: { checklist1, checklist2 in
+            return checklist1.name.localizedStandardCompare(
+                checklist2.name) == .orderedAscending })
     }
 }
