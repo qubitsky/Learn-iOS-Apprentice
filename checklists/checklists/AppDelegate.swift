@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let controller = navigationController.viewControllers[0]
             as! AllListsViewController
         controller.dataModel = dataModel
+        
+        // Notification authorization
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) {
+            granted, error in
+            if granted {
+                print("We have permission")
+            } else {
+                print("Permission denied")
+            }
+        }
+        let content = UNMutableNotificationContent()
+        content.title = "Hello!"
+        content.body = "I am a local notification"
+        content.sound = UNNotificationSound.default()
+        let trigger = UNTimeIntervalNotificationTrigger(
+            timeInterval: 10,
+            repeats: false)
+        let request = UNNotificationRequest(
+            identifier: "MyNotification",
+            content: content,
+            trigger: trigger)
+        center.add(request)
 
         return true
     }
