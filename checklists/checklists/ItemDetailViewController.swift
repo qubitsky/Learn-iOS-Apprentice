@@ -22,9 +22,19 @@ protocol ItemDetailViewControllerDelegate: class {
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     @IBOutlet weak var textField: UITextField!
-
+    @IBOutlet weak var shouldRemindSwitch: UISwitch!
+    @IBOutlet weak var dueDateLabel: UILabel!
+    
     weak var delegate: ItemDetailViewControllerDelegate?
     var itemToEdit: ChecklistItem?
+    var dueDate = Date()
+    
+    func updateDueDateLabel() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        dueDateLabel.text = formatter.string(from: dueDate)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +49,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
             title = "Edit Item"
             textField.text = item.text
             doneBarButton.isEnabled = true // add this line
+            shouldRemindSwitch.isOn = item.shouldRemind // add this
+            dueDate = item.dueDate
         }
+         updateDueDateLabel() // add this
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -56,13 +69,13 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView,
                             willSelectRowAt indexPath: IndexPath)
@@ -75,11 +88,15 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
 
     @IBAction func done() {
-        if let itemToEdit = itemToEdit {
-            itemToEdit.text = textField.text!
-            delegate?.itemDetailViewController(self, didFinishEditing: itemToEdit)
+        if let item = itemToEdit {
+            item.text = textField.text!
+            item.shouldRemind = shouldRemindSwitch.isOn // add this
+            item.dueDate = dueDate // add this
+            delegate?.itemDetailViewController(self, didFinishEditing: item)
         } else {
             let item = ChecklistItem(text: textField.text!)
+            item.shouldRemind = shouldRemindSwitch.isOn // add this
+            item.dueDate = dueDate // add this
             delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
     }
