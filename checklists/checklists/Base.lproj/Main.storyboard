@@ -297,6 +297,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-VC-VnQ">
                                                     <rect key="frame" x="310" y="7" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="shouldRemindToggled:" destination="LBw-If-Wv1" eventType="valueChanged" id="RhL-p6-0lZ"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -371,6 +374,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="561559872.91511798">
                                     <!--2018-10-18 12:51:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="dateChanged:" destination="LBw-If-Wv1" eventType="valueChanged" id="2dr-gj-ffx"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <constraints>
