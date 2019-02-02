@@ -15,6 +15,10 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var location: CLLocation?
     var updatingLocation = false
     var lastLocationError: Error?
+    let geocoder = CLGeocoder()
+    var placemark: CLPlacemark?
+    var performingReverseGeocoding = false
+    var lastGeocodingError: Error?
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
@@ -140,7 +144,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
-        print("didUpdateLocations \(newLocation)")        // 1
+        print("didUpdateLocations \(newLocation)")
+        // 1
         if newLocation.timestamp.timeIntervalSinceNow < -5 {
             return
         }
@@ -161,6 +166,20 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
                 stopLocationManager()
             }
             updateLabels()
+            if !performingReverseGeocoding {
+                print("*** Going to geocode")
+                performingReverseGeocoding = true
+                geocoder.reverseGeocodeLocation(newLocation, completionHandler: {
+                    placemarks, error in
+                    if let error = error {
+                        print("*** Reverse Geocoding error: \(error.localizedDescription)")
+                        return
+                    }
+                    if let places = placemarks {
+                        print("*** Found places: \(places)")
+                    }
+                })
+            }
         }
     }
 
