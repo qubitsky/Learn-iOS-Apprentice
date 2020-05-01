@@ -3,7 +3,7 @@
 ios 学徒
 
 - 语言 swift
-- 开发工具 xcode
+- [开发工具 xcode](./use_xcode.md)
 
 ## 章节内容
 
@@ -13,19 +13,19 @@ ios 学徒
 
 是一个控制滑块定位的小游戏
 
-![bullseye](./BullsEye.png)
+![bullseye](./images/BullsEye.png)
 
 ### 2: Checklists
 
 一个清单列表
 
-![checklists](./checklists.png)
+![checklists](./images/checklists.png)
 
 ### 3: MyLocations
 
 定位
 
-![MyLocations](./MyLocations.png)
+![MyLocations](./images/MyLocations.png)
 
 ### 4: StoreSearch
 
