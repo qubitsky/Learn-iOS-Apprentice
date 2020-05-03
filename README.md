@@ -31,4 +31,4 @@ ios 学徒
 
 店铺搜索
 
-![StoreSearch](./StoreSearch.png)
+![StoreSearch](./images/StoreSearch.png)
