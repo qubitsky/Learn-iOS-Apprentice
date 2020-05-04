@@ -33,10 +33,10 @@ class ViewController: UIViewController {
         score = 0
         startNewRound()
         let transition = CATransition()
-        transition.type = kCATransitionFade
+        transition.type = CATransitionType.fade
         transition.duration = 1
         transition.timingFunction = CAMediaTimingFunction(name:
-            kCAMediaTimingFunctionEaseOut)
+            CAMediaTimingFunctionName.easeOut)
         view.layer.add(transition, forKey: nil)
     }
     
@@ -61,7 +61,6 @@ class ViewController: UIViewController {
         let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
         startNewGame()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,21 +74,21 @@ class ViewController: UIViewController {
         score += points
         let title: String
         if diff == 0 {
-            title = "Perfect!"
+            title = "完美!"
             points += 100
         } else if diff < 5 {
-            title = "You almost had it!"
+            title = "很接近了!"
             if diff == 1 {
                 points += 50
             }
         } else if diff < 10 {
-            title = "Pretty good!"
+            title = "非常棒!"
         } else {
-            title = "Not even close..."
+            title = "不够接近..."
         }
-        let message = "You scored \(points) points"
+        let message = "你的得分: \(points)"
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: {action in self.startNewRound()})
+        let action = UIAlertAction(title: "好的", style: .default, handler: {action in self.startNewRound()})
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3F429224603EDC00070EC9 /* FZYaZTJ_Xi.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CC3F429024603EDC00070EC9 /* FZYaZTJ_Xi.TTF */; };
+		CC3F429324603EDC00070EC9 /* FZYaZTJ.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CC3F429124603EDC00070EC9 /* FZYaZTJ.TTF */; };
 		CC40A02F21478D7100F04065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40A02E21478D7100F04065 /* AppDelegate.swift */; };
 		CC40A03121478D7100F04065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40A03021478D7100F04065 /* ViewController.swift */; };
 		CC40A03421478D7100F04065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40A03221478D7100F04065 /* Main.storyboard */; };
@@ -17,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC40A02B21478D7100F04065 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3F428924602AC500070EC9 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3F429024603EDC00070EC9 /* FZYaZTJ_Xi.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYaZTJ_Xi.TTF; sourceTree = "<group>"; };
+		CC3F429124603EDC00070EC9 /* FZYaZTJ.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYaZTJ.TTF; sourceTree = "<group>"; };
 		CC40A02E21478D7100F04065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC40A03021478D7100F04065 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC40A03321478D7100F04065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,26 +43,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC3F428F24603EDC00070EC9 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CC3F429024603EDC00070EC9 /* FZYaZTJ_Xi.TTF */,
+				CC3F429124603EDC00070EC9 /* FZYaZTJ.TTF */,
+			);
+			name = fonts;
+			path = ../../fonts;
+			sourceTree = "<group>";
+		};
 		CC40A02221478D7100F04065 = {
 			isa = PBXGroup;
 			children = (
 				CC40A068214A138B00F04065 /* BullsEye.html */,
 				CC40A02D21478D7100F04065 /* BullsEye */,
-				CC40A02C21478D7100F04065 /* Products */,
+				CC3F428924602AC500070EC9 /* BullsEye.app */,
 			);
-			sourceTree = "<group>";
-		};
-		CC40A02C21478D7100F04065 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CC40A02B21478D7100F04065 /* BullsEye.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CC40A02D21478D7100F04065 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				CC3F428F24603EDC00070EC9 /* fonts */,
 				CC40A02E21478D7100F04065 /* AppDelegate.swift */,
 				CC40A03021478D7100F04065 /* ViewController.swift */,
 				CC40A064214A05A800F04065 /* AboutViewController.swift */,
@@ -87,7 +94,7 @@
 			);
 			name = BullsEye;
 			productName = BullsEye;
-			productReference = CC40A02B21478D7100F04065 /* BullsEye.app */;
+			productReference = CC3F428924602AC500070EC9 /* BullsEye.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,6 +109,7 @@
 				TargetAttributes = {
 					CC40A02A21478D7100F04065 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -114,7 +122,7 @@
 				Base,
 			);
 			mainGroup = CC40A02221478D7100F04065;
-			productRefGroup = CC40A02C21478D7100F04065 /* Products */;
+			productRefGroup = CC40A02221478D7100F04065;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -129,9 +137,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC40A03921478D7300F04065 /* LaunchScreen.storyboard in Resources */,
+				CC3F429324603EDC00070EC9 /* FZYaZTJ.TTF in Resources */,
 				CC40A069214A138B00F04065 /* BullsEye.html in Resources */,
 				CC40A03621478D7300F04065 /* Assets.xcassets in Resources */,
 				CC40A03421478D7100F04065 /* Main.storyboard in Resources */,
+				CC3F429224603EDC00070EC9 /* FZYaZTJ_Xi.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owlikesj.BullsEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -317,7 +327,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owlikesj.BullsEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
