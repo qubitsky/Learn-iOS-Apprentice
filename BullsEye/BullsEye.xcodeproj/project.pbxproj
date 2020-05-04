@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3667EF24604C4F00FD7A9B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3667EE24604C4F00FD7A9B /* WebKit.framework */; };
 		CC3F429224603EDC00070EC9 /* FZYaZTJ_Xi.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CC3F429024603EDC00070EC9 /* FZYaZTJ_Xi.TTF */; };
 		CC3F429324603EDC00070EC9 /* FZYaZTJ.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CC3F429124603EDC00070EC9 /* FZYaZTJ.TTF */; };
 		CC40A02F21478D7100F04065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40A02E21478D7100F04065 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3667EE24604C4F00FD7A9B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CC3F428924602AC500070EC9 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3F429024603EDC00070EC9 /* FZYaZTJ_Xi.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYaZTJ_Xi.TTF; sourceTree = "<group>"; };
 		CC3F429124603EDC00070EC9 /* FZYaZTJ.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZYaZTJ.TTF; sourceTree = "<group>"; };
@@ -37,12 +39,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3667EF24604C4F00FD7A9B /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC3667ED24604C4F00FD7A9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC3667EE24604C4F00FD7A9B /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC3F428F24603EDC00070EC9 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +70,7 @@
 				CC40A068214A138B00F04065 /* BullsEye.html */,
 				CC40A02D21478D7100F04065 /* BullsEye */,
 				CC3F428924602AC500070EC9 /* BullsEye.app */,
+				CC3667ED24604C4F00FD7A9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,7 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJ6EV476M5;
 				INFOPLIST_FILE = BullsEye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJ6EV476M5;
 				INFOPLIST_FILE = BullsEye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
