@@ -1,6 +1,6 @@
 ## guide
 
-https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html
+[A Swift Tour](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
 
 ### 内容
 
