@@ -2,7 +2,7 @@
 
 ios 学徒
 
-- 语言 swift
+- [语言 swift](./swift.md)
 - [开发工具 xcode](./use_xcode.md)
 
 ## 章节内容
