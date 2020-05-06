@@ -11,8 +11,8 @@ import UIKit
 class Checklist: NSObject, Codable {
     var name = ""
     var items = [ChecklistItem]()
-    var iconName = "No Icon"
-    init(name: String, iconName: String = "No Icon") {
+    var iconName = "没有图标"
+    init(name: String, iconName: String = "没有图标") {
         self.name = name
         self.iconName = iconName
         super.init()

@@ -31,7 +31,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         if let checklist = checklistToEdit {
-            title = "Edit Checklist"
+            title = "编辑清单"
             textField.text = checklist.name
             doneBarButton.isEnabled = true
             iconName = checklist.iconName

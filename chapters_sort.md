@@ -2,7 +2,7 @@
 
 此处整理各章节的知识点
 
-## 第1部分
+## 第1部分 bull's eye
 
 ### 第2章
 
@@ -52,3 +52,9 @@
 解决：需要添加 WebKit framework
 
 > https://stackoverflow.com/questions/47142434/ios11-wkwebview-crash-due-to-nsinvalidunarchiveoperationexception
+
+## 第2部分 checklists
+
+- Table View
+- MVC -> 第10章
+- performSegue

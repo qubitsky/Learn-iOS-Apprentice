@@ -114,6 +114,7 @@
 				TargetAttributes = {
 					CC7353C92154F9520069BCAC = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -304,8 +305,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owlikesj.checklists;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PRODUCT_NAME = checklists;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -322,8 +323,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owlikesj.checklists;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PRODUCT_NAME = checklists;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

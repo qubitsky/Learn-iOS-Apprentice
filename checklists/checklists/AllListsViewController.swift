@@ -10,7 +10,7 @@ import UIKit
 
 class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
     var dataModel: DataModel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +36,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
             performSegue(withIdentifier: "ShowChecklist", sender: checklist)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,14 +77,14 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         cell.accessoryType = .detailDisclosureButton
         let count = checklist.countUncheckedItems()
         if checklist.items.count == 0 {
-            cell.detailTextLabel!.text = "(No Items)"
+            cell.detailTextLabel!.text = "(没有项目)"
         } else if count == 0 {
-            cell.detailTextLabel!.text = "All Done!"
+            cell.detailTextLabel!.text = "已全部完成!"
         } else {
-            cell.detailTextLabel!.text = "\(count) Remaining"
+            cell.detailTextLabel!.text = "剩下 \(count) 条未完成"
         }
         cell.imageView!.image = UIImage(named: checklist.iconName)
-
+        
         return cell
     }
     
@@ -97,7 +97,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     override func tableView(
         _ tableView: UITableView,
-        commit editingStyle: UITableViewCellEditingStyle,
+        commit editingStyle: UITableViewCell.EditingStyle,
         forRowAt indexPath: IndexPath) {
         dataModel.lists.remove(at: indexPath.row)
         
@@ -123,7 +123,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         if segue.identifier == "ShowChecklist" {
             let controller = segue.destination
                 as! ChecklistViewController
-            controller.checklist = sender as! Checklist
+            controller.checklist = sender as? Checklist
         } else if segue.identifier == "AddChecklist" {
             let controller = segue.destination
                 as! ListDetailViewController
@@ -151,7 +151,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     func listDetailViewController(
         _ controller: ListDetailViewController,
         didFinishEditing checklist: Checklist) {
-        if let index = dataModel.lists.index(of: checklist) {
+        if let index = dataModel.lists.firstIndex(of: checklist) {
             let indexPath = IndexPath(row: index, section: 0)
             if let cell = tableView.cellForRow(at: indexPath) {
                 cell.textLabel!.text = checklist.name
@@ -161,5 +161,5 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         tableView.reloadData()
         navigationController?.popViewController(animated: true)
     }
-
+    
 }
